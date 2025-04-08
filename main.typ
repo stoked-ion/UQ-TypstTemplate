@@ -93,7 +93,7 @@ You can just copy paste images and typst should automatically upload the image i
 #image("FDC_Willard_-_lapa.svg.png", width: 27%)
 Use the '#"#figure"' function to create a figure with a caption.
 #figure(
-image("FDC_Willard_-_lapa.svg-1.png", width: 27%),
+image("FDC_Willard_-_lapa.svg.png", width: 27%),
   caption: [FDC Willard's signature],
 ) // Notice how image is a function inside the figure function inside '()' brackets, so it is not necessary to use the '#' sign for the image function. If '[]' brackets are used, it is not necessary to use the '#' sign for the function inside the brackets.
 
