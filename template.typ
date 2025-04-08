@@ -44,20 +44,6 @@
   // Author information.
   v(0.25fr)
   text(1.6em, weight: 70, authors.map(a => a.name).join(", "))
-  /*
-  pad(
-    top: 0.7em,
-    right: 20%,
-    grid(
-      columns: (1fr,) * calc.min(3, authors.len()),
-      gutter: 1em,
-      ..authors.map(author => align(start)[
-        *#author.name* \
-        #author.affiliation
-      ]),
-    ),
-  )
-*/
   // Advisor information.
   v(0.9fr)
   text(1.1em, weight: 70, PAdvisor)
@@ -91,10 +77,6 @@ align(center)[
   // Table of contents.
   outline(depth: 3, title: "Table of Contents")
   pagebreak()
-  // Table of figures.
-  //outline(target: figure, depth: 2, title: "Table of Figures")
-  //pagebreak()
-
 
   // Main body.
   counter(page).update(1)
@@ -114,7 +96,6 @@ show heading.where(level: 1): it => {
   strong(text(2em, it.body))
   line(length: 100%)
   v(0.8em)
-  // Return empty to avoid showing the original heading
 }
 
   body
@@ -131,7 +112,7 @@ show heading.where(level: 1): it => {
     line(length: 100%)
     v(0.5em)
   }
-  bibliography("PhD.bib")
+  bibliography("Bibliography.bib")
   pagebreak()
 
   // Appendices.
