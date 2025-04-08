@@ -79,7 +79,7 @@ Equations in typst can be quickly created using '#"$"',
 $a+b=c$.
 If you want the equation to be outside of the text, you can use '#"$ $"' and ensure there is space between the dollar signs and the equation.
 $ a-c=b $
-This will automatically also number the equations.
+This will automatically number the equations.
 // Refer to the typst website for all the different variables in equations.
 $ F=J times B,"  " F_(t h r u s t)=F_("thrust")= alpha+sigma^omega-Sigma Omega  $ <exampleeq> 
 // Remember to always leave a space between variables in math mode. Otherwise typst will think you are using a symbol name
