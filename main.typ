@@ -51,7 +51,7 @@ _Why in italic?_ // Enclosed underscore for italic text.
 #emph([#strong("Why in bold emphasis?")]) // Emphasized bold text.
 
 #text(style: "italic", red)[
-  Read the .typfile comments to understand the difference between the functions.] // This is a function that sets the text style to italic and color to red. read documentation for more information.
+  Read the .typ file comments to understand the difference between the functions and other tips and tricks.] // This is a function that sets the text style to italic and color to red. read documentation for more information.
 
 == Aims
 Use the '-' to create a bullet point list.
@@ -98,6 +98,7 @@ image("FDC_Willard_-_lapa.svg.png", width: 27%),
 ) // Notice how image is a function inside the figure function inside '()' brackets, so it is not necessary to use the '#' sign for the image function. If '[]' brackets are used, it is not necessary to use the '#' sign for the function inside the brackets.
 
 Create a table using the '#"#table"' function.
+
 #table(align:left, columns: 2,
   [*Heading 1*], [*Heading 2*],
   [1], [2],
@@ -120,6 +121,9 @@ Nest it in a figure using the '#"#figure"' function.
   ),
   caption: [This is a table with specific column lengths]
 ) //There are different ways to set length in typst. 'pt' is one of them. You can also use 'cm', 'em', '%',....
+
+//There is a specific line in the template file that sets the caption position to the top of the table. You can comment it out if you want the caption to be at the bottom of the table.
+
 Now  this paragraph is immediately after the table.
 #v(1em)
 You can use the '#"#v"' function to create vertical space between elements.

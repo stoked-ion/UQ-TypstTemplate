@@ -98,6 +98,9 @@ show heading.where(level: 1): it => {
   v(0.8em)
 }
 
+// Custom table caption styling to place the caption before the table content
+show figure.where(kind: table): set figure.caption(position: top)
+
   body
   set page(numbering: none)
 
