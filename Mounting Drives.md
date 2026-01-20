@@ -4,13 +4,13 @@ The manual steps to mount your shared drives in linux are mentioned below, and a
 
 ## Step 1: Locate and modify your fstab file
 
-- This file should be located in your etc directory
+- The fstab file, located at /etc/fstab in Unix-like systems, is a configuration file that contains information about disk partitions and how they should be mounted into the file system. It specifies details such as the device, mount point, file system type, and mount options for each entry.
 ```bash
 cd /etc
 ```
-- Open the fstab file using your favourite text editor (vim is the only right answer!)
+- Open the fstab file using your favourite text editor (vim is the only right answer!) The 'sudo' stands for "superuser do" and allows for admin priveleges which you would need to edit and save the fstab file.
 ```bash
-vim fstab
+sudo vim fstab
 ```
 - Add the following lines at the end of your fstab file, while replacing <span style="color: violet;">'uqname'</span> with your username and adding your password after _'password='_ 
 ```
@@ -41,4 +41,7 @@ sudo mount -a
 
 - The '-a' argument is asking the computer to mount all drives in the fstab file and if no mistakes were made, you should be able to access your shared drives now.
 
-- Do note that, sometimes, you would need to repeat step 3 after a reboot to mount your drives again. There are magical linux ways to skip this step.
+> [!NOTE]
+> Do note that, sometimes, you would need to repeat step 3 after a reboot to mount your drives again. There are magical linux ways to skip this step.
+>
+> Sometimes, when you mount your drives after modifying your fstab file, you might be asked to do a 'systemctl daemon-reload' command to reload the fstab file in systemd (a service manager in Linux)
